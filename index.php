@@ -1,7 +1,5 @@
 <?php
-// index.php
-
-// Função para carregar o conteúdo das páginas
+session_start();
 function render($template, $data = [])
 {
     extract($data);
@@ -41,6 +39,18 @@ switch ($params[0]) {
         render('views/trabalhos.php');
         break;
 
+    case 'perfil':
+        render('views/perfil.php');
+        break;
+
+    case 'login':
+        render('views/login.php');
+        break;
+
+    case 'mensagens':
+        render('views/mensagens.php');
+        break;
+
     case 'doacao':
         if (isset($params[1]) && isset($doacoes[$params[1]])) {
             render('views/doacao.php', ['doacao' => $doacoes[$params[1]]]);
@@ -67,7 +77,6 @@ switch ($params[0]) {
         break;
 
     default:
-        http_response_code(404);
-        echo 'Página não encontrada';
+        render('views/not-found.php');
         break;
 }
