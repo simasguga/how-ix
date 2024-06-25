@@ -51,6 +51,14 @@ switch ($params[0]) {
         render('views/mensagens.php');
         break;
 
+    case 'logout':
+        render('views/logout.php');
+        break;
+
+    case 'registrar':
+        render('views/registrar.php');
+        break;
+
     case 'doacao':
         if (isset($params[1]) && isset($doacoes[$params[1]])) {
             render('views/doacao.php', ['doacao' => $doacoes[$params[1]]]);
