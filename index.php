@@ -1,17 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.S. - Alimento Solidário</title>
-</head>
-<body>
-    <?php include "./components/Header";?>
-    <main>
+<?php
+// index.php
 
-    </main>
-    <footer>
-        
-    </footer>
-</body>
-</html>
+// Função para carregar o conteúdo das páginas
+function render($template, $data = [])
+{
+    extract($data);
+    include $template;
+}
+
+// Simulação de banco de dados em memória
+$doacoes = [
+    1 => ['id' => 1, 'item' => 'Arroz', 'quantidade' => 10, 'doador' => 'Maria'],
+    2 => ['id' => 2, 'item' => 'Feijão', 'quantidade' => 5, 'doador' => 'José'],
+];
+
+// Captura da URL para roteamento
+$request = $_SERVER['REQUEST_URI'];
+$params = explode('/', trim($request, '/'));
+
+// Roteamento básico
+switch ($params[0]) {
+    case '':
+    case 'home':
+        render('views/home.php');
+        break;
+
+    case 'doar':
+        render('views/doar.php');
+        break;
+
+    case 'receber':
+        render('views/receber_doacao.php');
+        break;
+
+    case 'localidades':
+        render('views/localidades.php');
+        break;
+
+    case 'trabalhos':
+        render('views/trabalhos.php');
+        break;
+
+    case 'doacao':
+        if (isset($params[1]) && isset($doacoes[$params[1]])) {
+            render('views/doacao.php', ['doacao' => $doacoes[$params[1]]]);
+        } else {
+            http_response_code(404);
+            echo 'Doação não encontrada';
+        }
+        break;
+
+    case 'adicionar':
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Processar dados do formulário (simplificado)
+            $novoId = count($doacoes) + 1;
+            $doacoes[$novoId] = [
+                'id' => $novoId,
+                'item' => $_POST['item'],
+                'quantidade' => $_POST['quantidade'],
+                'doador' => $_POST['doador'],
+            ];
+            echo 'Doação adicionada com sucesso!';
+        } else {
+            render('views/adicionar.php');
+        }
+        break;
+
+    default:
+        http_response_code(404);
+        echo 'Página não encontrada';
+        break;
+}
