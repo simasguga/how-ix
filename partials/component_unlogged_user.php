@@ -1,0 +1,2 @@
+<button class="btn border border-1 rounded text-white" onclick="location.href = '/login'">Login</button>
+<button class="btn border border-1 rounded text-white" onclick="location.href = '/registrar'">Cadastrar-se</button>

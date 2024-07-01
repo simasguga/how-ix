@@ -2,7 +2,13 @@
 $d = 'd-none';
 if ($_POST) {
     if ($_POST['email'] != "" && $_POST['pwd'] != "") {
-        $_SESSION['id'] = 1;
+        $aut = new Authentication();
+        $aut->setUserId(1);
+        $aut->setUserLogged(true);
+        $aut->save();
+        $status_user = true;
+        $_SESSION["newsession"] = true;
+        $user_on = $_SESSION["newsession"];
         header('Location: /');
     } else {
         $d = 'd-flex';

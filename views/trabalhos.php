@@ -20,9 +20,9 @@
             <div class="border border-1 rounded-2 w-100 p-3">
                 <div class="d-flex w-100" style="height: 150px;">
                     <div class="w-25 img_linkable" id="img_linkable">
-                        IMAGEM
+                        <img src="https://plus.unsplash.com/premium_photo-1661775317533-2163ba4dbc93?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width: 100%;">
                     </div>
-                    <div class="d-flex flex-column w-75">
+                    <div class="d-flex flex-column w-75 ps-3">
                         <div class="d-flex">
                             <div class="titeInfo fs-5 text-truncate title_linkable" id="title_linkable">Cidades da Região de Penha, SC onde Ocorreram Doações</div>
                         </div>
@@ -36,9 +36,9 @@
             <div class="border border-1 rounded-2 w-100 p-3">
                 <div class="d-flex w-100" style="height: 150px;">
                     <div class="w-25 img_linkable" id="img_linkable">
-                        IMAGEM
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width: 100%;">
                     </div>
-                    <div class="d-flex flex-column w-75">
+                    <div class="d-flex flex-column w-75 ps-3">
                         <div class="d-flex">
                             <div class="titeInfo fs-5 text-truncate title_linkable" id="title_linkable">Coletas Realizadas Recentemente por Restaurantes/Mercados</div>
                         </div>
@@ -52,9 +52,9 @@
             <div class="border border-1 rounded-2 w-100 p-3">
                 <div class="d-flex w-100" style="height: 150px;">
                     <div class="w-25 img_linkable" id="img_linkable">
-                        IMAGEM
+                        <img src="https://images.unsplash.com/photo-1609139003551-ee40f5f73ec0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" style="width: 100%;">
                     </div>
-                    <div class="d-flex flex-column w-75">
+                    <div class="d-flex flex-column w-75 ps-3">
                         <div class="d-flex">
                             <div class="titeInfo fs-5 text-truncate title_linkable" id="title_linkable">Entregas Realizadas Recentemente por Restaurantes/Mercados</div>
                         </div>

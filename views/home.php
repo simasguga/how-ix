@@ -1,3 +1,6 @@
+<?php
+print_r($status_user);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,12 +51,12 @@
                 </div>
             </div>
         </section>
-        <section class="sobre_container">
-
-        </section>
     </main>
-    <footer>
-
+    <hr class="m-0 mt-3">
+    <footer class="py-3">
+        <div class="d-flex justify-content-center">
+            <a href="/" class="text-secondary">A.S. Alimento Solidário © 2024</a>
+        </div>
     </footer>
     <?php include "./includes/footer.php"; ?>
 </body>

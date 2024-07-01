@@ -1,7 +1,7 @@
 <?php 
 
-// session_destroy();
-$_SESSION['id'] = "";
+session_destroy();
+$status_user = null;
 
 header('Location: /');
 
